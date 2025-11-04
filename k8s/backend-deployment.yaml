@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: your-dockerhub-username/movie-backend:latest
+        image: koushikbijili/movie-backend:latest
         ports:
         - containerPort: 5000
 ---
@@ -32,3 +32,8 @@ spec:
       port: 5000
       targetPort: 5000
   type: ClusterIP
+
+      port: 5000
+      targetPort: 5000
+  type: ClusterIP
+
