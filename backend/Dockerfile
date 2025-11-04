@@ -1,7 +1,21 @@
+# Use Node.js official image
 FROM node:18
+
+# Set working directory
 WORKDIR /app
+
+# Copy package files first for caching
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install
+
+# Copy all source code
 COPY . .
+
+# Expose backend port
 EXPOSE 5000
-CMD ["npm", "start"]
+
+# Start backend
+CMD ["node", "server.js"]
+
