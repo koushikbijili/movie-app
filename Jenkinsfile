@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/yourusername/movie-app.git'
+                git 'https://github.com/koushikbijili/movie-app.git'
             }
         }
 
@@ -45,3 +45,4 @@ pipeline {
         }
     }
 }
+
