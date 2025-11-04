@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: your-dockerhub-username/movie-frontend:latest
+        image: koushikbijili/movie-frontend:latest
         ports:
         - containerPort: 80
 ---
@@ -32,3 +32,4 @@ spec:
       port: 80
       targetPort: 80
   type: LoadBalancer
+
