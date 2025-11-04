@@ -1,10 +1,24 @@
-version: "3"
+version: '3.8'
+
 services:
   backend:
     build: ./backend
+    container_name: movie-backend
     ports:
       - "5000:5000"
+    networks:
+      - movie-network
+
   frontend:
     build: ./frontend
+    container_name: movie-frontend
     ports:
       - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - movie-network
+
+networks:
+  movie-network:
+    driver: bridge
