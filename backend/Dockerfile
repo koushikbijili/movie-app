@@ -4,13 +4,13 @@ FROM node:18
 # Set working directory
 WORKDIR /app
 
-# Copy package files first for caching
+# Copy package files first
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy all source code
+# Copy app source
 COPY . .
 
 # Expose backend port
@@ -18,4 +18,5 @@ EXPOSE 5000
 
 # Start backend
 CMD ["node", "server.js"]
+
 
